@@ -1,7 +1,7 @@
 /**
  * Java 1. Homework 2
  * 
- * @author Mikhail
+ * @author Mikhail Dementev
  * @version 20.01.2022
  */
 class HW2 {
