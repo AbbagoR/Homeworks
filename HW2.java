@@ -8,7 +8,7 @@ class HW2 {
     public static void main (String[] args) {
         System.out.println(checkSum(24, 2));
         checkNumber(-7);
-        System.out.println(checkPositive(-8));
+        System.out.println(checkNegative(-8));
         writestring("apple", 3);
         System.out.println(checkYear(2400));
     }
