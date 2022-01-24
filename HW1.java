@@ -16,18 +16,18 @@ class HW1 {
         int a = 6;
         int b = -18;
         int c = a + b;
-        System.out.println(c > 0 ? "Сумма положительная" : "Сумма отрицательная");
+        System.out.println(c > 0 ? "Summ positive" : "Summ negative");
     }
 
     static void printColor() {
-        int value = 154;
+        int value = 54;
         if (value <= 0) {
-            System.out.println("Красный");
+            System.out.println("Red");
         } else {
-            if (value > 0 && value <= 100) {
-                System.out.println("Желтый");
+            if (value <= 100) {
+                System.out.println("Yellow");
             } else {
-                System.out.println("Зеленый");
+                System.out.println("Green");
             }
         }
     }
