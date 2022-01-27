@@ -13,7 +13,7 @@ class HW3 {
         massivehundred();
         massivesix();
         massivediagonal();
-        System.out.println(Arrays.toString(massivelength()));
+        System.out.println(Arrays.toString(massivelength(3, 5)));
         massiveminmax();
     }
     static void massivezeroone() {
@@ -52,12 +52,7 @@ class HW3 {
         }
         System.out.println(Arrays.deepToString(msd));
     }
-    static int[] massivelength() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Length= ");
-        int len = scanner.nextInt();
-        System.out.println("Value= ");
-        int initialValue = scanner.nextInt();
+    static int[] massivelength(int len, int initialValue) {
         int[] msl = new int[len];
         for (int i = 0; i < msl.length; i++) {
             msl[i] = initialValue;
@@ -67,8 +62,8 @@ class HW3 {
     static void massiveminmax() {
         int[] msm = new int[10];
         Random random = new Random();
-        int min = 10;
-        int max = 0;
+        int min = msm[0];
+        int max = msm[0];
         for (int i = 0; i < msm.length; i++) {
             msm[i] = random.nextInt(10);
             int c = msm[i];
