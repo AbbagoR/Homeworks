@@ -4,44 +4,52 @@
  * @author Mikhail Dementev
  * @version 30.01.2022 - 31.01.2022
  */
- 
-class HW5 {
-    public static void main (String[] args) {
-        Comrade comrade = new Comrade();
-        if (comrade.age > 40){
-            System.out.println(comrade);
+
+public class HW5 {
+    public static void main(String[] args) {
+        Comrade[]comrades = {
+                new Comrade("Ivan", "engineer", "Ivan@mail.ru", "phone", 25000, 25),
+                new Comrade("Carl", "operator", "Carl@mail.ru", "phone", 25000, 44),
+                new Comrade("Inokentiy", "boxer", "Inokentiy@mail.ru", "phone", 25000, 40),
+                new Comrade("Alexey", "manager", "Alexey@mail.ru", "phone", 25000, 45),
+                new Comrade("Alexandr", "operator", "Alexandr@mail.ru", "phone", 25000, 50)
+        };
+        for (Comrade comrade : comrades) {
+            if (comrade.getAge() > 40) {
+                System.out.println(comrade);
+            }
         }
     }
- }
- 
+}
+
 class Comrade {
     private String name;
-    private String profession;
+    private String job;
     private String email;
     private String phone;
     private int money;
     private int age;
-    public int getAge() {
-            return age;
-    }
-    Comrade (String name, String profession, String emai, String phone, int money, int age) {
+
+    public Comrade(String name, String job, String email, String phone, int money, int age) {
         this.name = name;
-        this.profession = profession;
+        this.job = job;
         this.email = email;
         this.phone = phone;
         this.money = money;
         this.age = age;
     }
 
-    Comrade[] cArray = new Comrade[5];
-            cArray[0] = new Comrade("Ivan", "Job", "email", "phone", "25000", "25");
-            cArray[1] = new Comrade("Carl", "Job", "email", "phone", "25000", "30");
-            cArray[2] = new Comrade("Inokentiy", "Job", "email", "phone", "25000", "40");
-            cArray[3] = new Comrade("Alexey", "Job", "email", "phone", "25000", "45");
-            cArray[4] = new Comrade("Alexandr", "Job", "email", "phone", "25000", "50");
+    public int getAge() {
+        return age;
+    }
 
-     @Override
-     public String toString() {
-         return "Comrade:" + name + ", " + profession + ", " + emai + ", " + phone + ", " + money + ", " + age;
-     }
- }
+    @Override
+    public String toString() {
+        return (name +
+                "\n- job: " +job +
+                "\n- email: " +email +
+                "\n- phone: " +phone +
+                "\n- money: " +money +
+                "\n- age: " +age);
+    }
+}
